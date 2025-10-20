@@ -1,17 +1,11 @@
-// App.js
-import React from 'react';
-import { ScrollView } from 'react-native';
-import Messenger from './Messenger';
-import NewsFeed from './NewsFeed';
-import styles from './styles';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import TabNavigator from "./navigation/TabNavigator";
 
-const App = () => {
+export default function App() {
   return (
-    <ScrollView style={styles.container}>
-      <Messenger />
-      <NewsFeed />
-    </ScrollView>
+    <NavigationContainer>
+      <TabNavigator />
+    </NavigationContainer>
   );
-};
-
-export default App;
+}
